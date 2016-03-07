@@ -1,5 +1,4 @@
 <?php
-
 namespace Vinelab\UrlShortener\Tests;
 
 use Mockery as M;
@@ -7,14 +6,14 @@ use Vinelab\Http\Response;
 use Vinelab\UrlShortener\Drivers\Bitly;
 
 /**
- * Class BitlyTest.
+ * Class BitlyTest
  *
  * @category Test Class
- *
+ * @package Vinelab\UrlShortener\Tests
  * @author  Mahmoud Zalt <mahmoud@vinelab.com>
  */
-class BitlyTest extends TestCase
-{
+class BitlyTest extends TestCase {
+
     public function setUp()
     {
         parent::setUp();
@@ -31,24 +30,26 @@ class BitlyTest extends TestCase
         return [
             'domain' => 'https://api-ssl.bitly.com',
             'endpoint' => '/v3/shorten',
-            'token' => '1234567890qwertyuiopasdfghjklzxcvbnm',
+            "token" => "1234567890qwertyuiopasdfghjklzxcvbnm",
         ];
     }
 
     /**
-     * test initializing an object of Bitly.
+     * test initializing an object of Bitly
      */
     public function testInitializingBitlyInstance()
     {
+
         $parameters = $this->driverParameters();
 
-        $bitly = new Bitly($parameters);
+        $bitly = New Bitly($parameters);
 
         $this->assertInstanceOf('Vinelab\UrlShortener\Drivers\Bitly', $bitly);
     }
 
+
     /**
-     * TODO: continue the tests.
+     * TODO: continue the tests
      */
 //    public function testCallingShortenFunction()
 //    {
@@ -72,7 +73,7 @@ class BitlyTest extends TestCase
 //    }
 
 
-    public function testMissingToken()
-    {
-    }
+
+    public function testMissingToken(){}
+
 }

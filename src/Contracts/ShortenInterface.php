@@ -1,9 +1,9 @@
 <?php
-
 namespace Vinelab\UrlShortener\Contracts;
 
 /**
- * Interface ShortenInterface.
+ * Interface ShortenInterface
+ * @package Vinelab\UrlShortener\Contracts
  */
 interface ShortenInterface
 {
@@ -15,4 +15,5 @@ interface ShortenInterface
      * @param $url
      */
     public function url($url);
+
 }
